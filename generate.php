@@ -61,7 +61,7 @@ foreach ($files as $data) {
                     $str = "|| ". strtoupper(substr($basename, 0, 1)) . " || ";
                     $first = false;
                 }
-                $str .= "<img src='http://wiki.famfamfam.googlecode.com/hg/images/".($data['dir'] != '.' ? $data['dir'] : '')."/{$basename}.{$filetype}' alt='{$basename}' title='{$basename}' /> ";
+                $str .= "<img src='http://wiki.famfamfam.googlecode.com/hg/images".($data['dir'] != '.' ? $data['dir'] : '')."/{$basename}.{$filetype}' alt='{$basename}' title='{$basename}' /> ";
                    $old_basename = $basename;
             }
             echo "  - done...".PHP_EOL;
