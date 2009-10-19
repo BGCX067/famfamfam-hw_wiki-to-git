@@ -1,5 +1,7 @@
 <?php
-$files = array( 
+$packer = "\"C:/program files/7-zip/7z.exe\"";
+
+$files = array(
     array(
         'dir'       => '.',
         'summary'   => 'All icons',
@@ -32,7 +34,7 @@ foreach ($files as $data) {
         $num_of_icons_any = count($icons[null]);
 
         $basename = $old_basename = '';
-        $first = true;	
+        $first = true;
 
         if ($filetype) {
             echo "- {$num_of_icons} icons of filetype {$filetype} ".PHP_EOL;
@@ -43,24 +45,24 @@ foreach ($files as $data) {
 
             foreach (array('zip','tar') AS $archiver) {
                 $filename_archive = "filename_{$archiver}";
-                file_put_contents($filename_wiki, "A {$archiver} archive with all {$num_of_icons} {$filetype} icons can be downloaded here: [http://famfamfam.googlecode.com/svn/wiki/{$$filename_archive} {$$filename_archive}]\n".PHP_EOL, FILE_APPEND);
+                file_put_contents($filename_wiki, "A {$archiver} archive with all {$num_of_icons} {$filetype} icons can be downloaded here: [http://wiki.famfamfam.googlecode.com/hg/{$$filename_archive} {$$filename_archive}]\n".PHP_EOL, FILE_APPEND);
 
                 $filename_any = strtolower(str_replace(' ', '_', $data['summary'])).".{$archiver}";
-                file_put_contents($filename_wiki, "A {$archiver} archive with all {$num_of_icons_any} icons can be downloaded here: [http://famfamfam.googlecode.com/svn/wiki/{$filename_any} {$filename_any}]\n".PHP_EOL, FILE_APPEND);
+                file_put_contents($filename_wiki, "A {$archiver} archive with all {$num_of_icons_any} icons can be downloaded here: [http://wiki.famfamfam.googlecode.com/hg/{$filename_any} {$filename_any}]\n".PHP_EOL, FILE_APPEND);
             }
-    
+
             echo "- Generating wiki file '{$filename_wiki}'".PHP_EOL;
             foreach ($iconfiles AS $filename_icon) {
-	            $basename = basename($filename_icon, ".{$filetype}");
-	            if (substr($basename, 0, 1) != substr($old_basename, 0, 1)) {
-		            if (!$first) {	    	
-			            file_put_contents($filename_wiki, $str." ||".PHP_EOL, FILE_APPEND);
-		            }
-                	$str = "|| ". strtoupper(substr($basename, 0, 1)) . " || ";
-            		$first = false;
-	            }
-	            $str .= "<img src='http://famfamfam.googlecode.com/svn/wiki/images/".($data['dir'] != '.' ? $data['dir'] : '')."/{$basename}.{$filetype}' alt='{$basename}' title='{$basename}' /> ";
-               	$old_basename = $basename;
+                $basename = basename($filename_icon, ".{$filetype}");
+                if (substr($basename, 0, 1) != substr($old_basename, 0, 1)) {
+                    if (!$first) {
+                        file_put_contents($filename_wiki, $str." ||".PHP_EOL, FILE_APPEND);
+                    }
+                    $str = "|| ". strtoupper(substr($basename, 0, 1)) . " || ";
+                    $first = false;
+                }
+                $str .= "<img src='http://wiki.famfamfam.googlecode.com/hg/images/".($data['dir'] != '.' ? $data['dir'] : '')."/{$basename}.{$filetype}' alt='{$basename}' title='{$basename}' /> ";
+                   $old_basename = $basename;
             }
             echo "  - done...".PHP_EOL;
 
@@ -72,21 +74,15 @@ foreach ($files as $data) {
             $icondir = dirname(__FILE__)."/images/".($data['dir'] != '.' ? $data['dir'] : '');
 
             chdir($icondir);
-            switch ($archiver) { 
-                case 'zip':
-                    $cmd = "zip -D -q ".dirname(__FILE__)."/{$$filename_archive} *".($filetype ? ".{$filetype}" : '');
-                    break;
-                case 'tar':
-                    $cmd = "tar --exclude=flags --exclude-vcs -zcf ".dirname(__FILE__)."/{$$filename_archive} *".($filetype ? ".{$filetype}" : '');
-                    break;
-            }
+            $cmd = "{$packer} a -t{$archiver} ".dirname(__FILE__)."/{$$filename_archive} *".($filetype ? ".{$filetype}" : '')." > :NUL";
             $cmd = str_replace('//', '/', $cmd);
 
+//            echo $cmd.PHP_EOL;
             system($cmd);
             echo "  - done...".PHP_EOL;
             echo PHP_EOL;
             chdir(dirname(__FILE__));
 
-        }            
+        }
     }
 }
