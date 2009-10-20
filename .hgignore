@@ -2,6 +2,8 @@
 syntax: glob
 *.php
 imagemagick.txt
+custom
+thumb.db
 
 # switch to regexp syntax.
 syntax: regexp
