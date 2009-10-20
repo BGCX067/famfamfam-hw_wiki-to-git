@@ -1,0 +1,7 @@
+# use glob syntax.
+syntax: glob
+*.php
+imagemagick.txt
+
+# switch to regexp syntax.
+syntax: regexp
