@@ -4,20 +4,20 @@
 Following is a list of available *zip* achives
 <table>
 <tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>1044</td><td>gif icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons_gif.zip silk_icons_gif.zip]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>2118</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons.zip silk_icons.zip]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>1074</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons_png.zip silk_icons_png.zip]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>3190</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons.zip silk_icons.zip]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>2146</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons_png.zip silk_icons_png.zip]</td></tr>
 <tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>249</td><td>gif icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons_gif.zip flag_icons_gif.zip]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>498</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons.zip flag_icons.zip]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>249</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons_png.zip flag_icons_png.zip]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>747</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons.zip flag_icons.zip]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>498</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons_png.zip flag_icons_png.zip]</td></tr>
 </table><br/>
 
 Following is a list of available *tar* achives
 <table>
 <tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>1044</td><td>gif icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons_gif.tar silk_icons_gif.tar]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>2118</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons.tar silk_icons.tar]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>1074</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons_png.tar silk_icons_png.tar]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>3190</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons.tar silk_icons.tar]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>2146</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/silk_icons_png.tar silk_icons_png.tar]</td></tr>
 <tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>249</td><td>gif icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons_gif.tar flag_icons_gif.tar]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>498</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons.tar flag_icons.tar]</td></tr>
-<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>249</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons_png.tar flag_icons_png.tar]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>747</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons.tar flag_icons.tar]</td></tr>
+<tr><td><img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/></td><td>498</td><td>png icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/flag_icons_png.tar flag_icons_png.tar]</td></tr>
 </table><br/>
 
