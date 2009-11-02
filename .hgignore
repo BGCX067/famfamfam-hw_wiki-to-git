@@ -1,7 +1,5 @@
 # use glob syntax.
 syntax: glob
-*.php
-imagemagick.txt
 custom
 thumb.db
 
