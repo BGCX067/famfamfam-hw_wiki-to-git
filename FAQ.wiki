@@ -1,12 +1,34 @@
 #summary Frequently Asked Questions
 
+I am using [http://www.imagemagick.org ImageMagick] and below is a list of the commands I have used to create the different "new" icons. 
+
+{{{
+c:\Users\janpolsen\Desktop\famfamfam>"C:\Program Files\ImageMagick-6.5.6-Q16-windows\ImageMagick-6.5.6-6\convert.exe" --version
+Version: ImageMagick 6.5.6-6 2009-09-28 Q16 OpenMP http://www.imagemagick.org
+Copyright: Copyright (C) 1999-2009 ImageMagick Studio LLC
+}}}
+
 Create the "bullet" files (*caution: this replaces the original file*):
 {{{
 mogrify -resize 8x8 *.png
 }}}
 
-
 Add "bullets" to an icon:
 {{{
-composite -geometry +8+8 "8x8/magnifier.png" "script.png" "script_magnifier.png"
+composite -geometry +8+8 "8x8/bullet.png" "icon.png" "icon_bullet.png"
+}}}
+
+"Colorize" an image to another color:
+{{{
+convert icon.png +level-colors red, icon_red.png
+}}}
+
+Convert between image types:
+{{{
+convert icon.gif icon.png
+}}}
+
+"Fade" an icon (see <tt>scripts/fade.php</tt>):
+{{{
+php fade.php -f *.png
 }}}
