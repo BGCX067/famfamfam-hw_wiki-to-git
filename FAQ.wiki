@@ -1,1 +1,12 @@
 #summary Frequently Asked Questions
+
+Create the "bullet" files (*caution: this replaces the original file*):
+{{{
+mogrify -resize 8x8 *.png
+}}}
+
+
+Add "bullets" to an icon:
+{{{
+composite -geometry +8+8 "8x8/magnifier.png" "script.png" "script_magnifier.png"
+}}}
