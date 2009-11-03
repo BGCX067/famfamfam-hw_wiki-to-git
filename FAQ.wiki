@@ -17,6 +17,9 @@ Add "bullets" to an icon:
 {{{
 composite -geometry +8+8 "8x8/bullet.png" "icon.png" "icon_bullet.png"
 }}}
+{{{
+composite -geometry +6+6 "10x10/bullet.png" "icon.png" "icon_bullet.png"
+}}}
 
 "Colorize" an image to another color:
 {{{
