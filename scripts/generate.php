@@ -48,7 +48,8 @@ foreach ($files as $data) {
             
             foreach (array('zip','tar') AS $archiver) {
                 $filename_archive = "filename_{$archiver}";
-                $downloads[$archiver][$$filename_archive] = "<tr><td>{$bullet}</td><td>{$num_of_icons}</td><td>{$filetype} icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/{$$filename_archive} {$$filename_archive}]</td></tr>".PHP_EOL;
+                $basename = basename($$filename_archive);
+                $downloads[$archiver][$$filename_archive] = "<tr><td>{$bullet}</td><td>{$num_of_icons}</td><td>{$filetype} icons</td><td>[http://wiki.famfamfam.googlecode.com/hg/{$basename} {$basename}]</td></tr>".PHP_EOL;
 
                 $filename_any = strtolower(str_replace(' ', '_', $data['summary'])).".{$archiver}";
                 $downloads[$archiver][$filename_any] = "<tr><td>{$bullet}</td><td>{$num_of_icons_any}</td><td> </td><td>[http://wiki.famfamfam.googlecode.com/hg/{$filename_any} {$filename_any}]</td></tr>".PHP_EOL;
@@ -75,7 +76,7 @@ foreach ($files as $data) {
         foreach (array('zip','tar') AS $archiver) {
             $filename_archive = "filename_{$archiver}";
             echo "- Generating {$archiver} archive ({$$filename_archive}) with all {$filetype} icons...".PHP_EOL;
-            @unlink($$filename_archive);
+//            @unlink($$filename_archive);
             $icondir = "{$basedir}/images/".($data['dir'] != '.' ? $data['dir'] : '');
 
             chdir($icondir);
@@ -83,7 +84,7 @@ foreach ($files as $data) {
             $cmd = str_replace('//', '/', $cmd);
 
             echo $cmd.PHP_EOL;
-            system($cmd);
+//            system($cmd);
             echo "  - done...".PHP_EOL;
             echo PHP_EOL;
             chdir(dirname($basedir));
@@ -91,8 +92,7 @@ foreach ($files as $data) {
         }
     }
 }
-
-$download_wiki = "Downloads.wiki";
+$download_wiki = "{$basedir}/Downloads.wiki";
 file_put_contents($download_wiki, "#summary Downloads\n");
 file_put_contents($download_wiki, "#labels Featured \n", FILE_APPEND);
 file_put_contents($download_wiki, "\n", FILE_APPEND);
