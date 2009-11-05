@@ -30,6 +30,10 @@ Convert between image types:
 {{{
 convert icon.gif icon.png
 }}}
+Batch convert all PNG files to GIF:
+{{{
+mogrify -format gif *.png
+}}}
 
 "Fade" an icon (see <tt>scripts/fade.php</tt>):
 {{{
