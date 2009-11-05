@@ -76,7 +76,7 @@ foreach ($files as $data) {
         foreach (array('zip','tar') AS $archiver) {
             $filename_archive = "filename_{$archiver}";
             echo "- Generating {$archiver} archive ({$$filename_archive}) with all {$filetype} icons...".PHP_EOL;
-//            @unlink($$filename_archive);
+            @unlink($$filename_archive);
             $icondir = "{$basedir}/images/".($data['dir'] != '.' ? $data['dir'] : '');
 
             chdir($icondir);
@@ -84,7 +84,7 @@ foreach ($files as $data) {
             $cmd = str_replace('//', '/', $cmd);
 
             echo $cmd.PHP_EOL;
-//            system($cmd);
+            system($cmd);
             echo "  - done...".PHP_EOL;
             echo PHP_EOL;
             chdir(dirname($basedir));
