@@ -4,8 +4,9 @@
 <html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>famfamfam</title>
-        <script type="text/javascript" src="/javascript/jquery-1.2.6.pack.js"></script>
+        <script src="http://www.google.com/jsapi"></script>
         <script type="text/javascript">
+google.load("jquery", "1.3.2");
 //<![CDATA[
 $().ready( function() {
     $('#filter')
