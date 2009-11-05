@@ -13,9 +13,10 @@ $files = array(
     ),
 );
 $bullet = '<img alt="" src="http://wiki.famfamfam.googlecode.com/hg/images/bullet_blue.png"/>';
+$basedir = realpath("../");
 foreach ($files as $data) {
     echo $data['summary'].PHP_EOL;
-    $tmp = glob(dirname(__FILE__) . "/images/{$data['dir']}/*.*");
+    $tmp = glob("{$basedir}/images/{$data['dir']}/*.*");
     $icons = array();
     foreach ($tmp AS $iconfile) {
         $ext = strtolower(substr($iconfile, -3));
@@ -26,7 +27,7 @@ foreach ($files as $data) {
     }
 
     foreach ($icons AS $filetype => $iconfiles) {
-        $filename_wiki = strtolower(str_replace(' ', '_', $data['summary'])).($filetype ? "_{$filetype}" : '').".wiki";
+        $filename_wiki = $basedir."/".strtolower(str_replace(' ', '_', $data['summary'])).($filetype ? "_{$filetype}" : '').".wiki";
         $filename_tar  = str_replace('.wiki', '.tar', $filename_wiki);
         $filename_zip  = str_replace('.wiki', '.zip', $filename_wiki);
 
@@ -75,17 +76,17 @@ foreach ($files as $data) {
             $filename_archive = "filename_{$archiver}";
             echo "- Generating {$archiver} archive ({$$filename_archive}) with all {$filetype} icons...".PHP_EOL;
             @unlink($$filename_archive);
-            $icondir = dirname(__FILE__)."/images/".($data['dir'] != '.' ? $data['dir'] : '');
+            $icondir = "{$basedir}/images/".($data['dir'] != '.' ? $data['dir'] : '');
 
             chdir($icondir);
-            $cmd = "{$packer} a -t{$archiver} -x!flags/ ".dirname(__FILE__)."/{$$filename_archive} *".($filetype ? ".{$filetype}" : '')." > :NUL";
+            $cmd = "{$packer} a -t{$archiver} -x!flags/ {$$filename_archive} *".($filetype ? ".{$filetype}" : '')." > :NUL";
             $cmd = str_replace('//', '/', $cmd);
 
-//            echo $cmd.PHP_EOL;
+            echo $cmd.PHP_EOL;
             system($cmd);
             echo "  - done...".PHP_EOL;
             echo PHP_EOL;
-            chdir(dirname(__FILE__));
+            chdir(dirname($basedir));
 
         }
     }
