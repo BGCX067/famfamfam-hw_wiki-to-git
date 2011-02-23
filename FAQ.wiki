@@ -39,3 +39,8 @@ mogrify -format gif *.png
 {{{
 php fade.php -f *.png
 }}}
+
+Generate montage images:
+{{{
+montage -geometry +4+4 *.png montage.png
+}}}
