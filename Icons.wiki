@@ -1,0 +1,16 @@
+#summary Preview of icon sets
+
+= Introduction =
+
+The famfamfam icons are broken up into three sets: flag, mini, and silk.
+
+The images below give you a preview of all icons in each set.
+
+= Flag Icons =
+http://famfamfam.googlecode.com/hg/flag_montage.png
+
+= Mini Icons =
+http://famfamfam.googlecode.com/hg/mini_montage.png
+
+= Silk Icons =
+http://famfamfam.googlecode.com/hg/silk_montage.png
